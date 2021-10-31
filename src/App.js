@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+import Navigation from "./components/Navigation";
+import MenuOverlay from "./components/MenuOverlay";
+
+export default function App() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    document.body.style.overflow = showMenu ? "auto" : "hidden";
+    setShowMenu(!showMenu);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative">
+      <Navigation onOpenMenu={toggleMenu} />
+      <div className="pt-20 bg-gray-500 h-screen">Content</div>
+      {showMenu && <MenuOverlay onCloseMenu={toggleMenu} />}
     </div>
   );
 }
-
-export default App;
