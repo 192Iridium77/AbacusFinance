@@ -3,7 +3,7 @@ import { ReactComponent as Phone } from "./icons/Phone.svg";
 
 export default function Navigation({ onOpenMenu }) {
   return (
-    <div className="z-20 sticky bg-white top-0 border-b border-primary-600">
+    <div className="z-20 sticky bg-white top-0 border-b border-primary-100">
       <div className="container">
         <div className="flex justify-between py-4 items-center">
           <div className="flex items-center gap-4">
@@ -16,10 +16,10 @@ export default function Navigation({ onOpenMenu }) {
             <h1>Abacus Broker Finance</h1>
           </div>
           <div className="flex gap-4">
-            <a href="tel:0412345678">
+            <a className="w-6 h-6" href="tel:0412345678">
               <Phone />
             </a>
-            <button onClick={onOpenMenu}>
+            <button className="w-6 h-6" onClick={onOpenMenu}>
               <Menu />
             </button>
           </div>
