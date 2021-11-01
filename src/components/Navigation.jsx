@@ -4,7 +4,7 @@ import { ReactComponent as Phone } from "./icons/Phone.svg";
 export default function Navigation({ onOpenMenu }) {
   return (
     <div className="z-10 sticky bg-white top-0">
-      <div className="container mx-auto">
+      <div className="container">
         <div className="flex justify-between py-4 items-center">
           <div className="flex items-center gap-4">
             <img

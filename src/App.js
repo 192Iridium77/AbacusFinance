@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Navigation from "./components/Navigation";
 import MenuOverlay from "./components/MenuOverlay";
+import Header from "./components/Header";
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -14,7 +15,9 @@ export default function App() {
   return (
     <div className="relative">
       <Navigation onOpenMenu={toggleMenu} />
-      <div className="pt-20 bg-gray-500 h-screen">Content</div>
+      <div className="pt-12">
+        <Header></Header>
+      </div>
       {showMenu && <MenuOverlay onCloseMenu={toggleMenu} />}
     </div>
   );
