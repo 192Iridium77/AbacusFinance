@@ -1,4 +1,6 @@
 import { useState } from "react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 
 import Navigation from "./components/Navigation";
 import MenuOverlay from "./components/MenuOverlay";
@@ -15,7 +17,7 @@ export default function App() {
   return (
     <div className="relative">
       <Navigation onOpenMenu={toggleMenu} />
-      <div className="pt-12">
+      <div className="pt-8">
         <Header></Header>
       </div>
       {showMenu && <MenuOverlay onCloseMenu={toggleMenu} />}
