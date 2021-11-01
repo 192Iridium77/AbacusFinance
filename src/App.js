@@ -5,6 +5,7 @@ import "swiper/swiper.min.css";
 import Navigation from "./components/Navigation";
 import MenuOverlay from "./components/MenuOverlay";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -20,6 +21,7 @@ export default function App() {
       <div className="pt-8">
         <Header></Header>
       </div>
+      <Footer />
       {showMenu && <MenuOverlay onCloseMenu={toggleMenu} />}
     </div>
   );

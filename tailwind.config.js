@@ -7,6 +7,11 @@ module.exports = {
         center: true,
         padding: "1rem",
       },
+      colors: {
+        primary: {
+          600: "#3e7e95",
+        },
+      },
     },
   },
   variants: {
