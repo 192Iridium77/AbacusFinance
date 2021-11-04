@@ -13,7 +13,9 @@ export default function Navigation({ onOpenMenu }) {
               width="40"
               height="40"
             />
-            <h1>Abacus Broker Finance</h1>
+          </div>
+          <div className="text-primary-600 text-center text-2xl font-bold">
+            Abacus Broker Finance
           </div>
           <div className="flex gap-4">
             <a className="w-6 h-6" href="tel:0412345678">
