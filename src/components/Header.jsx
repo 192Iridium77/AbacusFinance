@@ -1,5 +1,4 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import Swiper core and required modles
 import SwiperCore, { Pagination } from "swiper";
 
 import Testimonial from "./Testimonial";
@@ -31,7 +30,7 @@ export default function Header() {
   ];
 
   return (
-    <div className="container" showArrows={true}>
+    <div className="container">
       <div className="mobile">
         <Swiper className="mySwiper" pagination>
           {testimonials.map((testimonial) => (

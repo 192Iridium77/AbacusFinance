@@ -27,6 +27,10 @@ code {
   visibility: hidden;
 }
 
+.logo {
+  height: "80px";
+}
+
 .mobile {
   @apply lg:hidden;
 }
@@ -40,13 +44,21 @@ p {
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-4xl lg:text-6xl font-bold;
 }
 
 h2 {
-  @apply text-2xl my-8 leading-tight font-bold;
+  @apply text-2xl lg:text-4xl mt-12 lg:mt-16 leading-tight font-bold;
 }
 
 h3 {
-  @apply text-lg my-4 leading-tight font-bold;
+  @apply text-lg lg:text-xl my-4 lg:my-8 leading-tight font-bold;
+}
+
+ul {
+  @apply ml-8;
+}
+
+li {
+  @apply list-disc;
 }
