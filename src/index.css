@@ -8,8 +8,8 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,12 +23,21 @@ code {
 .anchor {
   display: block;
   position: relative;
-  top: -100px;
+  top: -90px;
   visibility: hidden;
 }
 
 .logo {
   height: "80px";
+}
+
+.scrim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .mobile {
@@ -52,7 +61,7 @@ h2 {
 }
 
 h3 {
-  @apply text-lg lg:text-xl my-4 lg:my-8 leading-tight font-bold;
+  @apply text-lg lg:text-xl my-8 lg:mt-12 lg:mb-8 leading-tight font-bold;
 }
 
 ul {

@@ -5,18 +5,32 @@ module.exports = {
     extend: {
       container: {
         center: true,
-        padding: "1rem",
+        padding: "2rem",
       },
       colors: {
         primary: {
           100: "#cccccc",
           600: "#3e7e95",
         },
+        secondary: {
+          500: "#99CC99",
+        },
+      },
+      aspectRatio: {
+        square: [1, 1],
+        "21/9": [21, 9],
+        "16/9": [16, 9],
+        "4/3": [4, 3],
+        "3/2": [3, 2],
+        "4/5": [4, 5],
+        "1/2": [1, 2],
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ["group-hover"],
+    },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-aspect-ratio")],
 };

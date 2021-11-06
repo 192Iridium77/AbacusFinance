@@ -1,7 +1,7 @@
 export default function Footer() {
   const SiteMap = () => {
     return (
-      <div className="flex">
+      <div className="flex gap-2 font-bold">
         <div className="w-6/12">
           <a href="#services" className="block text-lg mt-2">
             Services
@@ -55,7 +55,17 @@ export default function Footer() {
   };
 
   const Logos = () => {
-    return <div>Logos</div>;
+    const columns = "w-6/12";
+    return (
+      <div className="flex flex-wrap items-center">
+        <div className={columns}>
+          <img height="60" src="logos/mfaa.png" alt="MFAA" />
+        </div>
+        <div className={columns}>
+          <img height="60" src="logos/choiceagg.png" alt="Choice Aggregation" />
+        </div>
+      </div>
+    );
   };
 
   const Legal = () => {
@@ -69,7 +79,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="bg-primary-600 py-12 mt-8">
+    <div className="bg-primary-600 py-12 mt-12">
       <div className="container text-white">
         <div className="mobile">
           <SiteMap />

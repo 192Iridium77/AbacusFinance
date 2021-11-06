@@ -1,8 +1,46 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination } from "swiper";
+
+import LogosGrid from "./LogosGrid";
+
 SwiperCore.use([Pagination]);
 
 export default function Services() {
+  const loanOptions = [
+    {
+      title: `Long Term`,
+      description: `Long term business loans are (secured by commercial or residential
+        property) up to 25 years`,
+      image: "images/warehouse.jpg",
+      alt: "Business Warehouse",
+    },
+    {
+      title: `Short Term`,
+      description: `finance for seasonal variations such as overdrafts,
+      unsecured/secured loans`,
+      image: "images/Home.jpg",
+      alt: "Home Short Term Finance",
+    },
+    {
+      title: `Asset finance`,
+      description: `finance for vehicles and business equipment`,
+      image: "images/Excavator.jpg",
+      alt: "Home Short Term Finance",
+    },
+    {
+      title: `Business Insurance`,
+      description: "",
+      image: "images/businessInsurance.jpg",
+      alt: "Business Insurance",
+    },
+    {
+      title: `Merchant Insurance`,
+      description: "",
+      image: "images/merchantInsurance.jpg",
+      alt: "Merchant Insurance",
+    },
+  ];
+
   const LogosCarousel = () => {
     return (
       <Swiper className="mySwiper mobile" pagination>
@@ -40,40 +78,33 @@ export default function Services() {
     );
   };
 
-  const LogosGrid = () => {
-    const columns = "w-4/12";
+  const LoansOffered = () => {
     return (
-      <div className="flex flex-wrap items-center">
-        <div className={columns}>
-          <img className="logo" src="/logos/anz-2-logo.png" alt="ANZ" />
-        </div>
-        <div className={columns}>
-          <img
-            className="logo"
-            src="/logos/BHCL_FullColour_221021.jpg"
-            alt="Mortgage Choice"
-          />
-        </div>
-        <div className={columns}>
-          <img className="logo" src="/logos/commbank-full.jpg" alt="Commbank" />
-        </div>
-        <div className={columns}>
-          <img
-            className="logo p-8"
-            src="/logos/CUSA.png"
-            alt="Credit Union SA"
-          />
-        </div>
-        <div className={columns}>
-          <img className="logo" src="/logos/ING.png" alt="ING" />
-        </div>
-        <div className={columns}>
-          <img
-            className="logo"
-            src="/logos/peppermoney.jpg"
-            alt="Pepper Money"
-          />
-        </div>
+      <div className="flex gap-4">
+        {loanOptions.map((option) => {
+          return (
+            <div
+              className="relative group"
+              style={{ width: "20%", minHeight: "300px" }}
+            >
+              <div className="scrim"></div>
+              <div
+                className="w-full h-full bg-no-repeat bg-center bg-cover"
+                style={{
+                  backgroundImage: `url(${option.image})`,
+                }}
+              ></div>
+              <div className="p-4 absolute flex flex-col justify-between inset-0 z-10 group">
+                <div className=" text-white text-center font-bold">
+                  {option.title}
+                </div>
+                <div className="hidden group-hover:block text-white text-center">
+                  {option.description}
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     );
   };
@@ -86,7 +117,7 @@ export default function Services() {
       </h2>
       <div className="anchor" id="loans" />
       <h3>Loans Offered</h3>
-      <ul>
+      <ul className="mobile">
         <li>
           <b>Long term business loans</b> (secured by commercial or residential
           property) up to 25 years
@@ -105,8 +136,11 @@ export default function Services() {
           <b>Merchant Insurance</b>
         </li>
       </ul>
+      <div className="desktop">
+        <LoansOffered />
+      </div>
       <div className="anchor" id="lenders" />
-      <div className="flex">
+      <div className="flex gap-4">
         <div className="lg:w-6/12">
           <h3>Lenders</h3>
           <p>
@@ -115,30 +149,52 @@ export default function Services() {
             Murray Bridge Finance
           </p>
         </div>
-        <div className="desktop lg:w-6/12">
+        <div className="desktop lg:w-6/12 lg:mt-16">
           <LogosGrid />
         </div>
       </div>
       <LogosCarousel />
       <div className="anchor" id="benefits" />
-      <h3>Benefits of a Broker</h3>
-      <p>
-        <b>Less stress</b>
-      </p>
-      <p>
-        I make it easier for you by preparing the paperwork, edging the
-        application and following up with the lender for you as your loan
-        progresses to settlement.
-      </p>
+      <div className="flex flex-col-reverse lg:flex-row mt-12">
+        <div
+          className="lg:w-6/12 bg-no-repeat bg-center bg-cover"
+          style={{
+            backgroundImage: `url('images/relax.jpg')`,
+            minHeight: "300px",
+          }}
+        ></div>
+        <div className="lg:w-6/12 bg-primary-600 text-white p-8">
+          <h3 className="mt-2 lg:mt-4">Benefits of a Broker</h3>
+          <p>
+            <b>Less stress</b>
+          </p>
+          <p>
+            I make it easier for you by preparing the paperwork, edging the
+            application and following up with the lender for you as your loan
+            progresses to settlement.
+          </p>
+        </div>
+      </div>
       <div className="anchor" id="cost" />
-      <h3>Cost of services</h3>
-      <p>
-        <b>No charge</b>
-      </p>
-      <p>
-        There is no charge to you for my service because the lender pays me
-        after your load settles.
-      </p>
+      <div className="lg:flex">
+        <div className="lg:w-6/12 bg-primary-600 text-white p-8">
+          <h3 className="mt-2 lg:mt-4">Cost of services</h3>
+          <p>
+            <b>No charge</b>
+          </p>
+          <p>
+            There is no charge to you for my service because the lender pays me
+            after your load settles.
+          </p>
+        </div>
+        <div
+          className="lg:w-6/12 bg-no-repeat bg-center bg-cover"
+          style={{
+            backgroundImage: `url('images/cost.jpg')`,
+            minHeight: "300px",
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
