@@ -4,15 +4,14 @@ import { ReactComponent as Mail } from "./icons/Mail.svg";
 export default function Services() {
   return (
     <div className="container">
-      <h2 className="text-center" id="contact">
-        Contact
-      </h2>
+      <div className="anchor" id="contact" />
+      <h2 className="text-center">Contact</h2>
       <div className="anchor" id="calculator" />
       <h3>Calculator</h3>
-      <p>This is a link to the official SA gov mortgage calculator.</p>
       <p>
-        It will help you work out your mortgage repayments, borrowing capacity
-        and when you can repay your loan sooner.
+        Here is a link to the official SA government mortgage calculator. It
+        will help you work out your mortgage repayments, borrowing capacity and
+        when you can repay your loan sooner.
       </p>
       <div className="flex justify-center mt-8">
         <a
@@ -22,9 +21,27 @@ export default function Services() {
           Mortgage Calculator
         </a>
       </div>
-      <div className="lg:flex mt-8 lg:mt-12">
+      <div className="anchor" id="area" />
+      <div className="flex flex-col-reverse lg:flex-row mt-8 lg:mt-12">
+        <div
+          className="lg:w-6/12 bg-no-repeat bg-center bg-cover"
+          style={{
+            backgroundImage: `url('images/regions.jpg')`,
+            minHeight: "300px",
+          }}
+        ></div>
         <div className="lg:w-6/12 bg-primary-600 text-white p-8">
-          <div className="anchor" id="about" />
+          <h3 className="mt-4">Area of Service</h3>
+          <p>
+            I provide service to Adelaide, the Adelaide Hills and even through
+            to Murray Bridge!
+          </p>
+        </div>
+      </div>
+
+      <div className="anchor" id="about" />
+      <div className="lg:flex mt-0">
+        <div className="lg:w-6/12 bg-primary-600 text-white p-8">
           <h3 className="mt-2 lg:mt-4">About me</h3>
           <p>
             My business lending experience is based on an extended period of
@@ -32,7 +49,10 @@ export default function Services() {
             commercial property, pawn trawlers to trucks and cars, etc.
           </p>
         </div>
-        <div className="lg:w-6/12">
+        <div
+          className="lg:flex lg:flex-col lg:w-6/12 justify-center lg:border border-primary-100"
+          style={{ minHeight: "300px" }}
+        >
           <div className="anchor" id="details" />
           <h2 className="text-center lg:mt-8 lg:mb-8">Stu Williams</h2>
           <p className="mt-4 lg:mt-8 font-bold text-center">

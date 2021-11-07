@@ -29,6 +29,9 @@ export default function Footer() {
             <a href="#calculator" className="block mt-1">
               Calculator
             </a>
+            <a href="#area" className="block mt-1">
+              Area of Service
+            </a>
             <a href="#about" className="block mt-1">
               About Me
             </a>

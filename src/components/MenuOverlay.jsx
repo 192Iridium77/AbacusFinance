@@ -34,6 +34,9 @@ export default function MenuOverlay({ onCloseMenu }) {
           <a href="#calculator" className="block mt-2" onClick={onNavigate}>
             Calculator
           </a>
+          <a href="#area" className="block mt-2" onClick={onNavigate}>
+            Area of Service
+          </a>
           <a href="#about" className="block mt-2" onClick={onNavigate}>
             About Me
           </a>
