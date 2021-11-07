@@ -9,13 +9,20 @@ export default function Services() {
       </h2>
       <div className="anchor" id="calculator" />
       <h3>Calculator</h3>
+      <p>This is a link to the official SA gov mortgage calculator.</p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        ornare suscipit sem ac imperdiet. Nullam quis tellus nec justo rutrum
-        malesuada id at orci. Maecenas interdum euismod quam, et varius nibh
-        porttitor vel.
+        It will help you work out your mortgage repayments, borrowing capacity
+        and when you can repay your loan sooner.
       </p>
-      <div className="lg:flex lg:mt-12 mt-8 lg:mt-0">
+      <div className="flex justify-center mt-8">
+        <a
+          className="inline-block bg-primary-600 rounded-sm text-white p-4 font-bold"
+          href="https://moneysmart.gov.au/home-loans/mortgage-calculator"
+        >
+          Mortgage Calculator
+        </a>
+      </div>
+      <div className="lg:flex mt-8 lg:mt-12">
         <div className="lg:w-6/12 bg-primary-600 text-white p-8">
           <div className="anchor" id="about" />
           <h3 className="mt-2 lg:mt-4">About me</h3>
