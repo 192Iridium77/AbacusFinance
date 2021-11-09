@@ -1,5 +1,3 @@
-import { ReactComponent as Macquarie } from "./Macquarie-logo.svg";
-
 export default function LogosGrid() {
   const columns = "w-3/12";
   return (
@@ -30,7 +28,10 @@ export default function LogosGrid() {
         <img className="logo" src="/logos/HSGov.jpg" alt="Home Start" />
       </div>
       <div className={columns}>
-        <Macquarie></Macquarie>
+        <img className="logo" src="/logos/macquarie-bank.png" alt="Macquarie" />
+      </div>
+      <div className={columns}>
+        <img className="logo" src="/logos/bankwest.jpg" alt="Bankwest" />
       </div>
     </div>
   );

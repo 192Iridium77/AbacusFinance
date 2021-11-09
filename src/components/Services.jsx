@@ -11,21 +11,21 @@ export default function Services() {
       title: `Long Term`,
       description: `Long term business loans are (secured by commercial or residential
         property) up to 25 years`,
-      image: "images/warehouse.jpg",
-      alt: "Business Warehouse",
+      image: "images/Home.jpg",
+      alt: "Home Long Term Finance",
     },
     {
       title: `Short Term`,
       description: `finance for seasonal variations such as overdrafts,
       unsecured/secured loans`,
-      image: "images/Home.jpg",
-      alt: "Home Short Term Finance",
+      image: "images/warehouse.jpg",
+      alt: "Business Warehouse",
     },
     {
       title: `Asset finance`,
       description: `finance for vehicles and business equipment`,
       image: "images/Excavator.jpg",
-      alt: "Home Short Term Finance",
+      alt: "Asset Finance",
     },
     {
       title: `Business Insurance`,
@@ -74,6 +74,16 @@ export default function Services() {
             alt="Pepper Money"
           />
         </SwiperSlide>
+        <SwiperSlide>
+          <img
+            className="logo"
+            src="/logos/macquarie-bank.png"
+            alt="Macquarie Bank"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className="logo" src="/logos/bankwest.jpg" alt="Bankwest" />
+        </SwiperSlide>
       </Swiper>
     );
   };
@@ -112,9 +122,6 @@ export default function Services() {
   return (
     <div className="container">
       <div className="anchor" id="services" />
-      <h2 id="services" className="text-center">
-        Services
-      </h2>
       <div className="anchor" id="loans" />
       <h3>Loans Offered</h3>
       <ul className="mobile">
@@ -138,6 +145,21 @@ export default function Services() {
       </ul>
       <div className="desktop">
         <LoansOffered />
+      </div>
+      <div className="anchor" id="calculator" />
+      <h3>Calculator</h3>
+      <p>
+        Here is a link to the federal government mortgage calculator. It will
+        help you work out your mortgage repayments, borrowing capacity and when
+        you can repay your loan sooner.
+      </p>
+      <div className="flex justify-center mt-8">
+        <a
+          className="inline-block bg-primary-600 rounded-sm text-white p-4 font-bold"
+          href="https://moneysmart.gov.au/home-loans/mortgage-calculator"
+        >
+          Mortgage Calculator
+        </a>
       </div>
       <div className="anchor" id="lenders" />
       <div className="flex gap-4">

@@ -50,7 +50,7 @@ export default function Footer() {
         <div>ABACUS BROKER FINANCE PTY LTD </div>
         <div className="mt-2">
           BASc (Mathematics & Econometrics)/Cert IV FMB/ Dip FMB/MA Accounting
-          (Training)
+          (Studying)
         </div>
         <div className="mt-2">ABN: 45 647 177 099 </div>
       </div>
