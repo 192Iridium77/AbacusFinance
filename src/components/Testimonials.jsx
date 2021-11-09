@@ -35,7 +35,9 @@ export default function Testimonials() {
   ];
 
   return (
-    <div className="container my-12">
+    <div className="container mb-8">
+      <div className="anchor" id="testimonials" />
+      <h3>What people say</h3>
       <div className="mobile">
         <Swiper className="mySwiper" pagination>
           {testimonials.map((testimonial) => (
