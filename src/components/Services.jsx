@@ -91,7 +91,7 @@ export default function Services() {
               className="relative group w-6/12"
               style={{ minHeight: "300px" }}
             >
-              <div className="hidden group-hover:block scrim"></div>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 scrim"></div>
               <div className="flex w-full h-full">
                 <div
                   className="w-6/12 h-full bg-no-repeat bg-center bg-cover"
@@ -107,10 +107,10 @@ export default function Services() {
                 ></div>
               </div>
               <div className="p-8 absolute flex flex-col justify-between inset-0 z-10 group">
-                <div className="hidden group-hover:block text-white text-center font-bold text-xl">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 text-white text-center font-bold text-xl">
                   {option.title}
                 </div>
-                <div className="hidden group-hover:block text-white font-bold">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 text-white font-bold">
                   {option.description}
                 </div>
               </div>
@@ -123,9 +123,8 @@ export default function Services() {
 
   return (
     <div className="container">
-      <div className="anchor" id="services" />
       <div className="anchor" id="loans" />
-      <h3>Loans Offered</h3>
+      <h3>Services Offered</h3>
       <div className="mobile">
         {loanOptions.map((option) => (
           <div className="flex flex-col gap-2 mb-4">
