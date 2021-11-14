@@ -3,7 +3,7 @@ export default function Header() {
     <div className="container">
       <div
         className="h-32 text-4xl bg-center bg-no-repeat bg-cover flex items-center justify-center mb-28"
-        style={{ backgroundImage: `url('images/AdelaideHills.jpg')` }}
+        style={{ backgroundImage: `url('images/vineyards.jpg')` }}
       >
         <div
           className="rounded-full p-20 bg-no-repeat bg-cover bg-center relative"
