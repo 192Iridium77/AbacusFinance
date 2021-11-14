@@ -15,8 +15,9 @@ export default function Services() {
         <div className="lg:w-6/12 bg-primary-600 text-white p-8">
           <h3 className="mt-4">Area of Service</h3>
           <p>
-            I provide service to Adelaide, the Adelaide Hills and even through
-            to Murray Bridge!
+            I provide services to Adelaide, the greater Adelaide region through
+            to the Victorian border and to your friends, family and colleagues
+            interstate.
           </p>
         </div>
       </div>
@@ -25,9 +26,12 @@ export default function Services() {
         <div className="lg:w-6/12 bg-primary-600 text-white p-8">
           <h3 className="mt-2 lg:mt-4">About me</h3>
           <p>
-            My business lending experience is based on an extended period of
-            lending with major banks financing everything from hot-air-balloons,
-            commercial property, pawn trawlers to trucks and cars, etc.
+            I have over 8 years’ experience working in banking and as a broker
+            financing homes, commercial properties, equipment, prawn trawlers
+            and many more. I have operated my own business’ for more than 12
+            years and managed national and international companies at senior
+            levels. I am continuously training in the finance industry to stay
+            ahead of future changes.
           </p>
         </div>
         <div

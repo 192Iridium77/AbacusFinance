@@ -8,36 +8,30 @@ SwiperCore.use([Pagination]);
 export default function Services() {
   const loanOptions = [
     {
-      title: `Long Term`,
-      description: `Long term business loans are (secured by commercial or residential
-        property) up to 25 years`,
-      image: "images/Home.jpg",
-      alt: "Home Long Term Finance",
+      title: "Residential Services",
+      description: (
+        <ul>
+          <li> Refinancing </li>
+          <li> Investing </li>
+          <li> Construction </li>
+          <li> 1st home loans using government grants</li>
+        </ul>
+      ),
+      leftImage: `images/Home.jpg`,
+      rightImage: `images/construction.jpg`,
     },
     {
-      title: `Short Term`,
-      description: `finance for seasonal variations such as overdrafts,
-      unsecured/secured loans`,
-      image: "images/warehouse.jpg",
-      alt: "Business Warehouse",
-    },
-    {
-      title: `Asset finance`,
-      description: `finance for vehicles and business equipment`,
-      image: "images/Excavator.jpg",
-      alt: "Asset Finance",
-    },
-    {
-      title: `Business Insurance`,
-      description: "",
-      image: "images/businessInsurance.jpg",
-      alt: "Business Insurance",
-    },
-    {
-      title: `Merchant Insurance`,
-      description: "",
-      image: "images/merchantInsurance.jpg",
-      alt: "Merchant Insurance",
+      title: "Commercial Services",
+      description: (
+        <ul>
+          <li> Long term loans using residential &amp; commercial property </li>
+          <li> Short term loans, overdrafts, unsecured loans </li>
+          <li> Asset Finance </li>
+          <li> Insurance</li>
+        </ul>
+      ),
+      leftImage: `images/Excavator.jpg`,
+      rightImage: `images/warehouse.jpg`,
     },
   ];
 
@@ -94,21 +88,29 @@ export default function Services() {
         {loanOptions.map((option) => {
           return (
             <div
-              className="relative group"
-              style={{ width: "20%", minHeight: "300px" }}
+              className="relative group w-6/12"
+              style={{ minHeight: "300px" }}
             >
-              <div className="scrim"></div>
-              <div
-                className="w-full h-full bg-no-repeat bg-center bg-cover"
-                style={{
-                  backgroundImage: `url(${option.image})`,
-                }}
-              ></div>
-              <div className="p-4 absolute flex flex-col justify-between inset-0 z-10 group">
-                <div className=" text-white text-center font-bold">
+              <div className="hidden group-hover:block scrim"></div>
+              <div className="flex w-full h-full">
+                <div
+                  className="w-6/12 h-full bg-no-repeat bg-center bg-cover"
+                  style={{
+                    backgroundImage: `url(${option.leftImage})`,
+                  }}
+                ></div>
+                <div
+                  className="w-6/12 h-full bg-no-repeat bg-center bg-cover"
+                  style={{
+                    backgroundImage: `url(${option.rightImage})`,
+                  }}
+                ></div>
+              </div>
+              <div className="p-8 absolute flex flex-col justify-between inset-0 z-10 group">
+                <div className="hidden group-hover:block text-white text-center font-bold text-xl">
                   {option.title}
                 </div>
-                <div className="hidden group-hover:block text-white text-center">
+                <div className="hidden group-hover:block text-white font-bold">
                   {option.description}
                 </div>
               </div>
@@ -124,25 +126,14 @@ export default function Services() {
       <div className="anchor" id="services" />
       <div className="anchor" id="loans" />
       <h3>Loans Offered</h3>
-      <ul className="mobile">
-        <li>
-          <b>Long term business loans</b> (secured by commercial or residential
-          property) up to 25 years
-        </li>
-        <li>
-          <b>Short term finance</b> for seasonal variations such as overdrafts,
-          unsecured/secured loans
-        </li>
-        <li>
-          <b>Asset finance</b> for vehicles and business equipment
-        </li>
-        <li>
-          <b>Business Insurance</b>
-        </li>
-        <li>
-          <b>Merchant Insurance</b>
-        </li>
-      </ul>
+      <div className="mobile">
+        {loanOptions.map((option) => (
+          <div className="flex flex-col gap-2 mb-4">
+            <div className="font-bold">{option.title}</div>
+            <div>{option.description}</div>
+          </div>
+        ))}
+      </div>
       <div className="desktop">
         <LoansOffered />
       </div>
@@ -166,9 +157,10 @@ export default function Services() {
         <div className="lg:w-6/12">
           <h3>Lenders</h3>
           <p>
-            NAB, CAB, Suncorp, Prospa, ING, BankWest, Adelaide Bank, ANZ,
-            Liberty, St. George, Westpac, Pepper Better Choice, Prime Capital,
-            Murray Bridge Finance
+            Just some of the 35+ lenders I can access include Adelaide Bank,
+            ANZ, BankWest, Better Choice, CBA, Credit Union SA, Homestart, ING,
+            Liberty Finance, Macquarie Bank, NAB, Pepper Money, St. George,
+            Westpac
           </p>
         </div>
         <div className="desktop lg:w-6/12 lg:mt-16">
@@ -186,14 +178,15 @@ export default function Services() {
           }}
         ></div>
         <div className="lg:w-6/12 bg-primary-600 text-white p-8">
-          <h3 className="mt-2 lg:mt-4">Benefits of a Broker</h3>
+          <h3 className="mt-2 lg:mt-4">Benefits of Abacus Broker Finance</h3>
           <p>
             <b>Less stress</b>
           </p>
           <p>
-            I make it easier for you by preparing the paperwork, edging the
-            application and following up with the lender for you as your loan
-            progresses to settlement.
+            I compare lenders and you only need to complete the paperwork once.
+            My job is to find the best lender’s products and services that match
+            your needs and at an interest rate that saves you money. No
+            uncomfortable meetings with lenders.
           </p>
         </div>
       </div>
@@ -205,8 +198,11 @@ export default function Services() {
             <b>No charge</b>
           </p>
           <p>
-            There is no charge to you for my service because the lender pays me
-            after your load settles.
+            My services are paid for by the lender and at no expense to
+            yourself. My costs are NOT added to the loan interest or expenses.
+            You pay the same as if you went direct to the lender. Why? The
+            lenders are saving money and increasing their access to potential
+            clients
           </p>
         </div>
         <div

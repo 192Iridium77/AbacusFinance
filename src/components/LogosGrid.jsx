@@ -28,7 +28,11 @@ export default function LogosGrid() {
         <img className="logo" src="/logos/HSGov.jpg" alt="Home Start" />
       </div>
       <div className={columns}>
-        <img className="logo" src="/logos/macquarie-bank.png" alt="Macquarie" />
+        <img
+          className="logo p-8"
+          src="/logos/macquarie-bank.png"
+          alt="Macquarie"
+        />
       </div>
       <div className={columns}>
         <img className="logo" src="/logos/bankwest.jpg" alt="Bankwest" />
