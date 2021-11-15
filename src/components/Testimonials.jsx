@@ -15,13 +15,6 @@ export default function Testimonials() {
   );
   const testimonials = [
     {
-      name: "David Schubert",
-      title: "1st Home Buyer at 61 years of age",
-      text: `Stu's done a great job and guided me through the issues that lenders were throwing.
-        He is always making sure I am OK and has helped every step of the way right till the end.
-        Bloody awesome.`,
-    },
-    {
       name: "Josye Henry",
       title: "1st home buyer as a single parent",
       text: `On a recommendation from Elders I was put on to Stu. He was sensitive to my needs and kept me up to date on how we were progressing.
@@ -31,6 +24,13 @@ export default function Testimonials() {
       name: "Bec Hoffmann",
       title: "Refinance of home plus property purchase",
       text: "Stu worked wonders in acquiring finance to purchase my first home. Stu walked me through every step with fantastic communication and positivity and achieved an excellent outcome. Thanks Stu!",
+    },
+    {
+      name: "David Schubert",
+      title: "1st Home Buyer at 61 years of age",
+      text: `Stu's done a great job and guided me through the issues that lenders were throwing.
+        He is always making sure I am OK and has helped every step of the way right till the end.
+        Bloody awesome.`,
     },
   ];
 
