@@ -10,7 +10,7 @@ collections:
     files:
       - label: "Homepage"
         name: "homepage"
-        file: "site/content/homepage.yml"
+        file: "site/content/homepage.json"
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
