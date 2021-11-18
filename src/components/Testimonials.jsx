@@ -16,13 +16,13 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: "Josye Henry",
-      title: "1st home buyer as a single parent",
+      title: "1st Home Buyer at 61 years of age",
       text: `On a recommendation from Elders I was put on to Stu. He was sensitive to my needs and kept me up to date on how we were progressing.
       I needed someone who knew how to deal as an experienced mortgage broker - He didn't disappoint.`,
     },
     {
       name: "Bec Hoffmann",
-      title: "1st Home Buyer at 61 years of age",
+      title: "1st home buyer as a single parent",
       text: "Stu worked wonders in acquiring finance to purchase my first home. Stu walked me through every step with fantastic communication and positivity and achieved an excellent outcome. Thanks Stu!",
     },
     {
