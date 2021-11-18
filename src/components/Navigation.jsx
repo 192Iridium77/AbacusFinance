@@ -27,7 +27,7 @@ export default function Navigation({ onOpenMenu }) {
             <Title />
           </div>
           <div className="flex gap-4">
-            <a className="w-6 h-6" href="tel:0412345678">
+            <a className="w-6 h-6" href="tel:0400367080">
               <Phone />
             </a>
             <button className="w-6 h-6" onClick={onOpenMenu}>
